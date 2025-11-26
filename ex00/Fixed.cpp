@@ -7,11 +7,11 @@ Fixed::Fixed() : _rawValue(0) {
 } 
 //Ctr par default
 
-Fixed::Fixed(const Fixed& copie)
+Fixed::Fixed(const Fixed& other) 
 {
     std::cout << "Copy constructor called" << std::endl;
-    *this = copie;
-}                                                         
+    _rawValue = other._rawValue; // copie directement la valeur brute
+}                                                       
 // ctr de copie cet a dire copie un objet deja existant avec c attribut
 Fixed& Fixed::operator=(const Fixed& other) 
 {
